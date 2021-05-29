@@ -1,0 +1,89 @@
+Create table Participant (
+             id int,
+			 nom varchar(30),
+			 prenom varchar (40),
+			 Constraint pk_Participant primary key (id)
+			 );
+
+Create table Professeur (
+             id int,
+			 nom varchar(20),
+			 prenom varchar (30),
+			 Constraint pk_Professeur primary key (id)
+			 );
+
+Create table Matiere (
+             id int,
+			 libelle varchar (20),
+			 Constraint pk_Matiere primary key (id)
+			 );
+
+Create table Classe (
+             id int,
+			 libelle varchar (10),
+			 Constraint pk_Classe primary key (id)
+			 );
+
+Create table Questions (
+           id int,
+		   libelle varchar (100),
+		   Constraint pk_Questions primary key (id) 
+		   );
+
+
+Create table Seance (
+            idConference int,
+			HeureDebut int,
+			HeureFin int,
+			DateDebut date,
+			DateFin date,
+			PartageEcran boolean,
+			idProfesseur int,
+			idMatiere int,
+			idClasse int,
+			Constraint pk_Seance primary key (idConference ),
+			Constraint fk_Seance_Professeur foreign key (idProfesseur) references Professeur (id),
+			Constraint fk_Seance_Matiere foreign key (idMatiere) references Matiere (id),
+			Constraint fk_Seance_Classe foreign key (idClasse) references Classe (id)
+			);
+			 
+			 
+Create table InfosParticipation (
+             id int,
+			 nbrconnexion int,
+			 nbrdeconnexion int,
+			 dureeMoyPresence int,
+			 TypeTerminal varchar (20),
+			 AdresseMail varchar (30),
+			 RegionOrigine varchar(40),
+			 idParticipant int,
+			 idConference int,
+			 Constraint pk_Info primary key (id),
+			 Constraint fk_Info_Participant foreign key (idParticipant) references Participant(id),
+			 Constraint fk_info_Seance foreign key (idConference) references Seance (idConference)
+			 );
+
+
+			 
+
+
+			
+Create table Participant_Seance (
+            idParticipant int,
+			idConference int,
+			Constraint pk_Participant_Seance primary key (idParticipant,idConference),
+			Constraint fk_Participant_Seance foreign key (idParticipant) references Participant (id),
+			Constraint fk_Participant_Seance foreign key  (idConference) references Seance (idConference)
+			);
+			
+Create table Evaluation (
+           id int,
+		   Date date,
+		   Heure int,
+		   idParticipant int,
+		   idConference int,
+		   Constraint pk_Evaluation primary key (id),
+		   Constraint fk_Evaluation_Participation foreign key (idParticipant) references Participant(id),
+		   Constraint fk_Evaluation_Seance foreign key (idConference) references Seance (idConference)
+		   );
+		   
