@@ -1,0 +1,16 @@
+INSERT INTO question ("id", "label", "note_max") VALUES (1, 'Comment qualifieriez-vous la charge de travail demandée par le cours ?', 10);
+INSERT INTO possibility ("id", "label", "poids", "question") VALUES (1, 'Beaucoup trop importante', 10,1), (2, 'Trop importante', 8, 1),(3, 'Un peu trop importante', 6, 1),(4, 'Ni trop importante ni trop insuffisante', 5, 1),(5, 'Trop insuffisante', 3,1);
+INSERT INTO question ("id", "label", "note_max") VALUES (2, 'Le cours a-t-il répondu à vos attentes ?', 10);
+INSERT INTO possibility ("id", "label", "poids", "question") VALUES (6, 'Extrêmement bien répondu ', 10,2), (7, 'Très bien répondu ', 8, 2),(8, 'Assez bien répondu ', 6, 2),(9, 'Peu répondu ', 5, 2),(10, 'Pas du tout répondu', 3,2);
+INSERT INTO question("id", "label", "note_max") VALUES (3, 'Le cours a-t-il contribué à votre connaissance en la matière ?', 10);
+INSERT INTO possibility ("id", "label", "poids", "question") VALUES (11, 'Enormément contribué ', 10,3), (12, 'Beaucoup contribué', 8, 3),(13, 'Plutôt contribué', 6, 3),(14, 'Peu contribué', 5, 3),(15, 'Pas du tout contribué', 3,3);
+INSERT INTO question("id", "label", "note_max") VALUES (4, 'Comment qualifiez-vous le cours ?', 10);
+INSERT INTO possibility ("id", "label", "poids", "question") VALUES (16, 'Extrêmement facile', 10,4), (17, 'Très facile', 8, 4),(18, 'Assez facile', 6, 4),(19, 'Ni facile ni difficile ', 5, 4),(20, 'Extrêmement difficile ', 3,4);
+INSERT INTO question("id", "label", "note_max") VALUES (5, 'Que pensez-vous du rythme du cours ?', 10);
+INSERT INTO possibility ("id", "label", "poids", "question") VALUES (21, 'Beaucoup trop rapide ', 3, 5), (22, 'Trop rapide ', 4, 5),(23, 'Un peu trop rapide ', 5, 5),(24, 'Ni trop rapide ni trop lent', 8, 5),(25, 'Beaucoup trop lent',4,5);
+INSERT INTO question("id", "label", "note_max") VALUES (6, 'Pensez-vous que les supports utilisés durant le cours ont été utiles ?', 10);
+INSERT INTO possibility ("id", "label", "poids", "question") VALUES (26, 'Extrêmement utiles', 10, 6), (27, 'Très utiles ', 8, 6),(28, 'Assez utiles', 6, 6),(29, 'Peu utiles', 5, 6),(30, 'Pas du tout utiles', 3,6);
+INSERT INTO question("id", "label", "note_max") VALUES (7, 'Dans l''ensemble,êtes vous satisafait (e) du contenu du cours', 10);
+INSERT INTO possibility ("id", "label", "poids", "question") VALUES (31, 'Extrêmement satisafait (e) ', 10,7), (32, 'Très satisfaite (e) ', 8, 7),(33, ' Assez satisfait (e) ', 6, 7),(34, ' Ni satisfait (e) ni insatisfait (e) ', 5, 7),(35, 'Très insatisfait (e) ', 3,7);
+INSERT INTO question("id", "label", "note_max") VALUES (8, 'Dans l''ensemble,quel est votre degré de satisfaction concernant le cours', 10);
+INSERT INTO possibility ("id", "label", "poids", "question") VALUES (36, 'Extrêmement satisafait (e)', 10,8), (37, 'Très satisfaite (e) ', 8, 8),(38, 'Assez satisfait (e) ', 6, 8),(39, 'Ni satisfait (e) ni insatisfait (e) ', 5, 8),(40, 'Très insatisfait (e) ', 3,8);
