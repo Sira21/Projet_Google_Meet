@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.quiz-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 700px;
+  overflow: hidden;
+}
+
+.quiz-header {
+  padding: 4rem;
+  padding-top: 1rem;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.pb-0{
+	padding-bottom: 10px;
+}
+
+.form-control{
+	width: 80%;
+	height: 05%;
+	margin-left: 60px;
+  	font: 400 24px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+.error{
+  	font: 400 20px/16px "Roboto", Helvetica, Arial, sans-serif;
+  	color: red;
+  	text-align: center;
+}
+
+h2 {
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+button {
+  background-color: #005e80;
+  border: none;
+  color: #fff;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 0.3em;
+}
+
+button:hover {
+  background-color: #023c5e;
+}
+
+button:focus {
+  outline: none;
+  background-color: #979fa1;
+}
+.htmlProg{
+    padding-top: 01px;
+}
+.skl{
+    color: #023c5e;
+}
+.sklLine{
+   position: relative;
+   visibility: hidden;
+   color: #023c5e;
+}
+.skillDiv {
+    height: 15px;
+    width: 100%;
+    background-color: rgb(231, 230, 230);
+}
+.skillBar {
+    display: block;
+    height: 15px;
+    background-color: #023c5e;
+}
+.htmlBar {
+    width: var(--progress-bar);
+    animation: html 3s 1s 5 forwards;
+}
+
+.header-bg{
+    width:100%;
+    background-color:#005e80;
+    padding:2px;
+}
+.wrapper{
+    margin:0 auto;
+    width:992px;
+}
+.header{
+    width:992px;
+    height:80px;
+    background-color:#005e80;
+}
+
+.title{
+    color: #FFF;
+    padding-left: 25%;
+    padding-bottom: 0rem;
+}
+.description{
+    color: #FFF;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}

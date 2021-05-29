@@ -1,0 +1,39 @@
+<!DOCTYPE lang="fr-FR">
+<html>
+<head>
+<title>Quiz : Module d'enqête</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link type="text/css" rel="stylesheet" th:href="@{/assets/quiz.css}">
+</head>
+<body>
+	<div class="quiz-container" id="quiz">
+
+		<div class="header-bg">
+			<div class="wrapper">
+				<div class="header">
+					<h3 class="title">Module d'enquête</h3>
+					<span class="description">Ce formulaire vous permet
+						d'évaluer la séance de façon anonyme.</span>
+				</div>
+			</div>
+		</div>
+
+		<form th:action="@{/find}" th:object="${investigation}" method="post">
+			<div class="quiz-header pb-0">
+				<h2>Saisir la référence de l'enquête.</h2>
+			</div>
+			<fieldset>
+				<input class="form-control" type="text" id="reference"
+					name="reference" th:field="*{reference}" required="required" />
+				<p th:if="${error}" class="error">
+					<span class="error" th:text="${error}"></span>
+				</p>
+			</fieldset>
+			<button id="submit">Démarrer</button>
+		</form>
+	</div>
+	<script th:src="@{/assets/quiz.js}"></script>
+</body>
+</html>

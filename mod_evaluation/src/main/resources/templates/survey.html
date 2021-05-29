@@ -1,0 +1,61 @@
+<!DOCTYPE lang="fr-FR">
+<html>
+<head>
+<title>Quiz : Module d'enqête</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link type="text/css" rel="stylesheet" th:href="@{/assets/quiz.css}">
+</head>
+<body>
+	<div class="quiz-container" id="quiz">
+
+		<div class="header-bg">
+			<div class="wrapper">
+				<div class="header">
+					<h3 class="title">Module d'enquête</h3>
+					<span class="description">Ce formulaire vous permet
+						d'évaluer la séance de façon anonyme.</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="htmlProg">
+			<div class="pp">
+				<div class="skillDiv">
+					<span class="skillBar htmlBar"></span>
+				</div>
+			</div>
+		</div>
+
+		<form id="formSurvey" th:action="@{/api/complete/__${reference}__/save}" method="post">
+
+		</form>
+		<div class="quiz-header">
+				<h2 id="question">Question text</h2>
+				<ul>
+					<li><input type="radio" name="answer" id="a" class="answer" />
+						<label for="a" id="a_text">Question</label></li>
+	
+					<li><input type="radio" name="answer" id="b" class="answer" />
+						<label for="b" id="b_text">Question</label></li>
+	
+					<li><input type="radio" name="answer" id="c" class="answer" />
+						<label for="c" id="c_text">Question</label></li>
+	
+					<li><input type="radio" name="answer" id="d" class="answer" />
+						<label for="d" id="d_text">Question</label></li>
+	
+					<li><input type="radio" name="answer" id="e" class="answer" />
+						<label for="e" id="e_text">Question</label></li>
+				</ul>
+			</div>
+			<button id="submit">Valider</button>
+	</div>
+	<script th:inline="javascript">
+		const quizData = /*[[${questions}]]*/[]
+	</script>
+	<script th:src="@{/assets/quiz.js}"></script>
+  	<script th:src="@{/assets/jquery-3.5.0.js}"></script>
+</body>
+</html>
